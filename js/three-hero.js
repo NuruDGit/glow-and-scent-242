@@ -125,16 +125,21 @@ if (canvas && supportsWebGL()) {
   const dust = new THREE.Points(dustGeo, dustMat);
   scene.add(dust);
 
-  /* Layout: keep the bottle right-of-center on wide screens */
+  /* Layout: bottle right of the headline on wide screens; smaller and
+     tucked below the copy on phones so the text stays readable */
+  let wide = true;
+  let baseY = -1.55;
+  const targetScale = () => (wide ? 1 : 0.55);
   function resize() {
     const w = canvas.clientWidth || canvas.parentElement.clientWidth;
     const h = canvas.clientHeight || canvas.parentElement.clientHeight;
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
-    const wide = w > 900;
+    wide = w > 900;
+    baseY = wide ? -1.55 : -2.55;
     bottle.position.x = wide ? 2.6 : 0;
-    bottle.scale.setScalar(Math.min(bottle.scale.x, wide ? 1 : 0.78) || bottle.scale.x);
+    bottle.scale.setScalar(Math.min(bottle.scale.x, targetScale()) || bottle.scale.x);
     dust.position.x = wide ? 1.4 : 0;
   }
   window.addEventListener("resize", resize);
@@ -149,11 +154,11 @@ if (canvas && supportsWebGL()) {
 
   /* Intro animation */
   if (window.gsap) {
-    const wide = (canvas.clientWidth || window.innerWidth) > 900;
-    gsap.to(bottle.scale, { x: wide ? 1 : 0.78, y: wide ? 1 : 0.78, z: wide ? 1 : 0.78, duration: 1.8, ease: "power3.out", delay: 0.45 });
+    const s = targetScale();
+    gsap.to(bottle.scale, { x: s, y: s, z: s, duration: 1.8, ease: "power3.out", delay: 0.45 });
     gsap.from(bottle.rotation, { y: -2.4, duration: 2.2, ease: "power3.out", delay: 0.45 });
   } else {
-    bottle.scale.setScalar(1);
+    bottle.scale.setScalar(targetScale());
   }
 
   /* Render loop */
@@ -165,7 +170,7 @@ if (canvas && supportsWebGL()) {
 
     bottle.rotation.y += 0.0035;
     bottle.rotation.z = Math.sin(t * 0.4) * 0.03;
-    bottle.position.y = -1.55 + Math.sin(t * 0.8) * 0.07;
+    bottle.position.y = baseY + Math.sin(t * 0.8) * 0.07;
 
     // gentle camera parallax toward the pointer; look at a fixed point so
     // the bottle stays offset to the right of the headline on wide screens
