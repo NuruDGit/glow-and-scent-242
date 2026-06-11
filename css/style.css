@@ -283,6 +283,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   color: var(--gold-light);
   font-size: 1.15em;
   display: inline-block;
+  margin-left: 0.1em;
   padding-right: 0.18em;
 }
 /* padding keeps the script font's flourishes inside the overflow mask
