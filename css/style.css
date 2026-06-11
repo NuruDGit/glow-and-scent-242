@@ -285,7 +285,14 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   display: inline-block;
   padding-right: 0.18em;
 }
-.hero-title .line { display: block; overflow: hidden; }
+/* padding keeps the script font's flourishes inside the overflow mask
+   used for the slide-up reveal; negative margin restores line spacing */
+.hero-title .line {
+  display: block;
+  overflow: hidden;
+  padding: 0.22em 0.15em;
+  margin: -0.22em -0.15em;
+}
 .hero-title .line > span { display: inline-block; }
 
 .hero-sub {
