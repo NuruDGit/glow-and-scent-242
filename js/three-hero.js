@@ -18,7 +18,20 @@ function supportsWebGL() {
   }
 }
 
-if (canvas && supportsWebGL()) {
+/* The 3D bottle is the fallback hero: if the lifestyle photo loads,
+   skip the scene entirely; if the photo 404s, start as usual. */
+const heroPhoto = document.querySelector(".hero-photo");
+if (!heroPhoto) {
+  initHero();
+} else if (heroPhoto.complete) {
+  if (!(heroPhoto.naturalWidth > 0)) initHero();
+  else heroPhoto.closest(".hero").classList.add("has-photo");
+} else {
+  heroPhoto.addEventListener("error", initHero, { once: true });
+}
+
+function initHero() {
+  if (!(canvas && supportsWebGL())) return;
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;

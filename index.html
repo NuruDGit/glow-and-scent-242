@@ -61,6 +61,11 @@
 
   <!-- ================= HERO ================= -->
   <header class="hero">
+    <!-- Lifestyle photo takes over (and retires the 3D bottle) when the file exists -->
+    <img class="hero-photo" src="assets/img/hero-lifestyle.jpg" alt="Spraying a luxury fragrance on a Bahamian beach at dusk"
+         fetchpriority="high"
+         onload="this.closest('.hero').classList.add('has-photo')"
+         onerror="this.remove()">
     <div class="hero-glow"></div>
     <canvas id="hero-canvas"></canvas>
     <div class="container">

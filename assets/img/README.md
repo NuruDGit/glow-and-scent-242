@@ -12,6 +12,7 @@ in all modern browsers — prefer real JPG for safety).
 | `collection-unisex.jpg` | Home → Collections → Unisex | 900×1200 (3:4 portrait) |
 | `collection-oils.jpg` | Home → Collections → Perfume Oils | 900×1200 (3:4 portrait) |
 | `story.jpg` | Home → Our Story panel | 1000×1250 (4:5 portrait) |
+| `hero-lifestyle.jpg` | Home → Hero background (replaces the 3D bottle) | 2560×1440 (16:9 landscape) |
 
 ## Product photos
 

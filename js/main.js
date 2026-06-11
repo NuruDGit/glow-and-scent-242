@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------- Hero intro ---------- */
+  // slow Ken Burns settle on the lifestyle photo (no-op if it 404s and removes itself)
+  if (document.querySelector(".hero-photo")) {
+    gsap.fromTo(".hero-photo", { scale: 1.1 }, { scale: 1, duration: 7, ease: "power2.out" });
+  }
   const heroTl = gsap.timeline({ defaults: { ease: "power4.out" } });
   heroTl
     .from(".hero-eyebrow", { y: 24, opacity: 0, duration: 1 }, 0.2)
