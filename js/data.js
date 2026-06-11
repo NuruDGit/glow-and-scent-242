@@ -11,6 +11,7 @@ const PRODUCTS = [
     id: "khamrah", name: "Khamrah", house: "Lattafa", category: "unisex",
     price: 65, originalPrice: 90, size: "100ml EDP", badge: "Best Seller",
     shape: "square", colors: ["#3a1d0c", "#c98a3d"],
+    image: "assets/img/products/khamrah.jpg",
     notes: { top: "Cinnamon, Nutmeg, Bergamot", heart: "Dates, Praline, Tuberose", base: "Vanilla, Tonka Bean, Amberwood" },
     desc: "Warm, sweet and spicy with a whisper of vanilla. Rich, luxurious and very long-lasting — the scent of golden hour, bottled."
   },
@@ -18,6 +19,7 @@ const PRODUCTS = [
     id: "khamrah-qahwa", name: "Khamrah Qahwa", house: "Lattafa", category: "unisex",
     price: 65, originalPrice: 90, size: "100ml EDP", badge: "Popular",
     shape: "square", colors: ["#2a1206", "#7a4a1e"],
+    image: "assets/img/products/khamrah-qahwa.jpg",
     notes: { top: "Coffee, Cardamom", heart: "Dates, Cinnamon", base: "Vanilla, Tonka, Amberwood" },
     desc: "A deep, warm coffee scent laced with sweet and spicy notes. Perfect for cozy island evenings."
   },
@@ -25,6 +27,7 @@ const PRODUCTS = [
     id: "khamrah-dukhan", name: "Khamrah Dukhan", house: "Lattafa", category: "unisex",
     price: 65, originalPrice: 90, size: "100ml EDP", badge: null,
     shape: "square", colors: ["#4a1018", "#a83a2e"],
+    image: "assets/img/products/khamrah-dukhan.jpg",
     notes: { top: "Cinnamon, Incense", heart: "Oud, Dates", base: "Amber, Vanilla, Tonka" },
     desc: "A smoky, spicy blend of cinnamon, oud and sweet amber. Warm, mysterious and utterly magnetic."
   },
@@ -32,6 +35,7 @@ const PRODUCTS = [
     id: "asad", name: "Asad", house: "Lattafa", category: "men",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: "Best Seller",
     shape: "square", colors: ["#14110a", "#8c6b2f"],
+    image: "assets/img/products/asad.jpg",
     notes: { top: "Black Pepper, Pineapple, Tobacco", heart: "Coffee, Labdanum, Iris", base: "Vanilla, Amber, Benzoin" },
     desc: "A bold and powerful scent with spicy notes, warm amber and smooth vanilla. The lion of the lineup."
   },
@@ -46,6 +50,7 @@ const PRODUCTS = [
     id: "asad-zanzibar", name: "Asad Zanzibar", house: "Lattafa", category: "men",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#0e2a4a", "#3f78c6"],
+    image: "assets/img/products/asad-zanzibar.jpg",
     notes: { top: "Citrus, Bergamot", heart: "Aromatic Spices, Lavender", base: "Warm Woods, Musk" },
     desc: "A fresh and vibrant scent with citrus, aromatic spices and warm woods. Clean, confident and breezy."
   },
@@ -53,6 +58,7 @@ const PRODUCTS = [
     id: "the-kingdom", name: "The Kingdom", house: "Lattafa", category: "men",
     price: 60, originalPrice: 65, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#5a4418", "#c9a23c"],
+    image: "assets/img/products/the-kingdom.jpg",
     notes: { top: "Spices, Bergamot", heart: "Tobacco, Vanilla", base: "Woods, Amber" },
     desc: "A warm, spicy fragrance blended with sweet vanilla, tobacco and rich woods. Regal and commanding."
   },
@@ -60,6 +66,7 @@ const PRODUCTS = [
     id: "teriaq-intense", name: "Teriaq Intense", house: "Lattafa", category: "unisex",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#1c1208", "#c9a23c"],
+    image: "assets/img/products/teriaq-intense.jpg",
     notes: { top: "Saffron, Spices", heart: "Sweet Accord, Florals", base: "Woods, Amber, Musk" },
     desc: "A bold, captivating fragrance with spicy, sweet and woody accords. Richly addictive."
   },
@@ -95,6 +102,7 @@ const PRODUCTS = [
     id: "badee-honor-glory", name: "Bade'e Al Oud – Honor & Glory", house: "Asdaaf", category: "unisex",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "square", colors: ["#7a6a2a", "#d8c98a"],
+    image: "assets/img/products/badee-honor-glory.jpg",
     notes: { top: "Pineapple, Bergamot", heart: "Spices, Orris", base: "Vanilla, Amber, Woods" },
     desc: "A luxurious blend of sweet pineapple, warm spices and creamy vanilla. Rich and elegant."
   },
@@ -102,6 +110,7 @@ const PRODUCTS = [
     id: "badee-oud-for-glory", name: "Bade'e Al Oud – Oud for Glory", house: "Asdaaf", category: "unisex",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "square", colors: ["#1a1208", "#7a5a2a"],
+    image: "assets/img/products/badee-oud-for-glory.jpg",
     notes: { top: "Saffron, Spices", heart: "Oud, Patchouli", base: "Woods, Amber, Musk" },
     desc: "A bold, smoky oud fragrance with warm spices and deep woody notes. Rich and intense."
   },
@@ -109,6 +118,7 @@ const PRODUCTS = [
     id: "badee-noble-blush", name: "Bade'e Al Oud – Noble Blush", house: "Asdaaf", category: "women",
     price: 50, originalPrice: 55, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#7a3a4a", "#e0a0aa"],
+    image: "assets/img/products/badee-noble-blush.jpg",
     notes: { top: "Pink Pepper, Berries", heart: "Rose Milk, Jasmine", base: "Vanilla, Musk" },
     desc: "A soft, creamy gourmand with rose milk, vanilla and musk. Sweet, tender and pretty."
   },
@@ -116,6 +126,7 @@ const PRODUCTS = [
     id: "badee-sublime", name: "Bade'e Al Oud – Sublime", house: "Asdaaf", category: "unisex",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "square", colors: ["#5a1018", "#b03a3a"],
+    image: "assets/img/products/badee-sublime.jpg",
     notes: { top: "Apple, Plum", heart: "Soft Oud, Rose", base: "Amber, Vanilla, Musk" },
     desc: "A juicy, fruity scent with apple and plum wrapped in soft oud. Sweet, fresh and elegant."
   },
@@ -123,6 +134,7 @@ const PRODUCTS = [
     id: "badee-amethyst", name: "Bade'e Al Oud – Amethyst", house: "Asdaaf", category: "unisex",
     price: 50, originalPrice: 55, size: "100ml EDP", badge: null,
     shape: "square", colors: ["#3a1a4a", "#9a6ac6"],
+    image: "assets/img/products/badee-amethyst.jpg",
     notes: { top: "Saffron, Rose", heart: "Oud, Orris", base: "Vanilla, Amber, Woods" },
     desc: "A rich blend of oud, rose and vanilla with a luxurious oriental touch. Bold and smoky."
   },
@@ -130,6 +142,7 @@ const PRODUCTS = [
     id: "yara", name: "Yara", house: "Lattafa", category: "women",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: "Best Seller",
     shape: "round", colors: ["#d96aa0", "#f3c2d8"],
+    image: "assets/img/products/yara.jpg",
     notes: { top: "Orchid, Tropical Fruits", heart: "Heliotrope, Gourmand Accord", base: "Vanilla, Musk" },
     desc: "A sweet tropical fragrance with vanilla, fruits and soft musk. Feminine, playful and long-lasting."
   },
@@ -137,6 +150,7 @@ const PRODUCTS = [
     id: "yara-tous", name: "Yara Tous", house: "Lattafa", category: "women",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#c98a1e", "#f0cf7a"],
+    image: "assets/img/products/yara-tous.jpg",
     notes: { top: "Mango, Coconut", heart: "Jasmine, Orchid", base: "Vanilla, Musk" },
     desc: "A bright tropical fragrance bursting with juicy mango, coconut and soft jasmine."
   },
@@ -144,6 +158,7 @@ const PRODUCTS = [
     id: "yara-moi", name: "Yara Moi", house: "Lattafa", category: "women",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#9a7a3a", "#e8d6a8"],
+    image: "assets/img/products/yara-moi.jpg",
     notes: { top: "Caramel, Bergamot", heart: "Jasmine, Orange Blossom", base: "Vanilla, Musk, Sandalwood" },
     desc: "A creamy floral scent with caramel, vanilla and jasmine. Soft, elegant and comforting."
   },
@@ -151,6 +166,7 @@ const PRODUCTS = [
     id: "yara-candy", name: "Yara Candy", house: "Lattafa", category: "women",
     price: 50, originalPrice: 65, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#c41e5a", "#f06a9a"],
+    image: "assets/img/products/yara-candy.jpg",
     notes: { top: "Strawberry, Candy", heart: "Vanilla, Florals", base: "Musk, Caramel" },
     desc: "A playful scent filled with strawberry candy, sweet vanilla and soft musk. Fun and flirty."
   },
@@ -158,6 +174,7 @@ const PRODUCTS = [
     id: "yara-elixir", name: "Yara Elixir", house: "Lattafa", category: "women",
     price: 50, originalPrice: 55, size: "100ml EDP", badge: "New",
     shape: "round", colors: ["#a83a6a", "#e89ab8"],
+    image: "assets/img/products/yara-elixir.jpg",
     notes: { top: "Sweet Fruits, Bergamot", heart: "Vanilla, Florals", base: "Musk, Amber" },
     desc: "A luxurious blend of sweet fruits, creamy vanilla and delicate florals. Feminine and refined."
   },
@@ -165,6 +182,7 @@ const PRODUCTS = [
     id: "eclaire", name: "Eclaire", house: "Lattafa", category: "women",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#9a7a2a", "#e8cf8a"],
+    image: "assets/img/products/eclaire.jpg",
     notes: { top: "Pear, Sweet Notes", heart: "Cream, Vanilla", base: "Caramel, Musk" },
     desc: "Sweet, creamy and feminine. Dessert-like and addictive from first spray to dry-down."
   },
@@ -172,6 +190,7 @@ const PRODUCTS = [
     id: "eclaire-pistache", name: "Eclaire Pistache", house: "Lattafa", category: "women",
     price: 55, originalPrice: 70, size: "100ml EDP", badge: "New",
     shape: "tall", colors: ["#5a7a3a", "#a8c87a"],
+    image: "assets/img/products/eclaire-pistache.jpg",
     notes: { top: "Pistachio, Almond", heart: "Cream, Vanilla", base: "Caramel, Musk" },
     desc: "Sweet and nutty with a creamy pistachio twist. Unique, gourmand and addictive."
   },
@@ -179,6 +198,7 @@ const PRODUCTS = [
     id: "eclaire-banoffi", name: "Eclaire Banoffi", house: "Lattafa", category: "women",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: "New",
     shape: "tall", colors: ["#9a7a3a", "#e0c98a"],
+    image: "assets/img/products/eclaire-banoffi.jpg",
     notes: { top: "Banana, Toffee", heart: "Cream, Vanilla", base: "Caramel, Musk" },
     desc: "A delicious gourmand inspired by the classic banoffee dessert. Rich, sweet and irresistible."
   },
@@ -186,6 +206,7 @@ const PRODUCTS = [
     id: "fakhar-women", name: "Fakhar Women", house: "Lattafa", category: "women",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#b07a3a", "#e8c98a"],
+    image: "assets/img/products/fakhar-women.jpg",
     notes: { top: "Florals, Bergamot", heart: "Powdery Notes, Iris", base: "Musk, Sandalwood" },
     desc: "Soft floral with a powdery finish. Feminine, elegant and effortlessly graceful."
   },
@@ -193,6 +214,7 @@ const PRODUCTS = [
     id: "fakhar-black-men", name: "Fakhar Black Men", house: "Lattafa", category: "men",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#14141a", "#7a7a84"],
+    image: "assets/img/products/fakhar-black-men.jpg",
     notes: { top: "Apple, Bergamot", heart: "Lavender, Geranium", base: "Amber, Woods, Musk" },
     desc: "A fresh, woody fragrance with apple, bergamot, lavender and warm amber. Sharp and refined."
   },
@@ -207,6 +229,7 @@ const PRODUCTS = [
     id: "angham", name: "Angham", house: "Lattafa", category: "women",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#9a8a4a", "#e8dca8"],
+    image: "assets/img/products/angham.jpg",
     notes: { top: "Florals, Bergamot", heart: "Jasmine, Rose", base: "Musk, Sandalwood" },
     desc: "Elegant, soft and slightly sweet. A smooth floral scent with a clean, luxurious finish."
   },
@@ -214,6 +237,7 @@ const PRODUCTS = [
     id: "victoria", name: "Victoria", house: "Lattafa", category: "women",
     price: 55, originalPrice: 65, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#1a3a5a", "#6a9ac6"],
+    image: "assets/img/products/victoria.jpg",
     notes: { top: "Citrus, Berries", heart: "Florals, Peony", base: "Musk, Woods" },
     desc: "Fresh, slightly sweet and radiant. A beautifully balanced scent for any occasion."
   },
@@ -221,6 +245,7 @@ const PRODUCTS = [
     id: "raneen", name: "Raneen", house: "Lattafa", category: "women",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#a83a5a", "#e89ab0"],
+    image: "assets/img/products/raneen.jpg",
     notes: { top: "Fruits, Bergamot", heart: "Jasmine, Rose", base: "Musk, Amber" },
     desc: "A charming floral-fruity fragrance with soft musky undertones. Feminine and elegant."
   },
@@ -228,6 +253,7 @@ const PRODUCTS = [
     id: "habik-women", name: "Habik Women", house: "Lattafa", category: "women",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#7a2a5a", "#c46aa0"],
+    image: "assets/img/products/habik-women.jpg",
     notes: { top: "Pear, Bergamot", heart: "Jasmine, Florals", base: "Musk, Amber" },
     desc: "A fresh floral-fruity fragrance with juicy pear, soft jasmine and warm musky amber."
   },
@@ -235,6 +261,7 @@ const PRODUCTS = [
     id: "ana-abiyedh-rouge", name: "Ana Abiyedh Rouge", house: "Lattafa", category: "unisex",
     price: 55, originalPrice: 60, size: "60ml EDP", badge: null,
     shape: "tall", colors: ["#7a1a2a", "#d46a7a"],
+    image: "assets/img/products/ana-abiyedh-rouge.jpg",
     notes: { top: "Saffron, Cardamom", heart: "Musk, Amber", base: "Woods, Vanilla" },
     desc: "A luxurious scent with sweet, musky and amber accords. Modern, elegant and clean."
   },
@@ -242,6 +269,7 @@ const PRODUCTS = [
     id: "her-confession", name: "Her Confession", house: "Lattafa", category: "women",
     price: 60, originalPrice: 70, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#9a8a5a", "#e8dcb8"],
+    image: "assets/img/products/her-confession.jpg",
     notes: { top: "Florals, Bergamot", heart: "Cream, Jasmine", base: "Vanilla, Musk" },
     desc: "Soft, creamy and delicately sweet with a gentle floral touch. Feminine and elegant."
   },
@@ -249,6 +277,7 @@ const PRODUCTS = [
     id: "his-confession", name: "His Confession", house: "Lattafa", category: "men",
     price: 60, originalPrice: 70, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#14141a", "#5a5a64"],
+    image: "assets/img/products/his-confession.jpg",
     notes: { top: "Spices, Bergamot", heart: "Woods, Leather", base: "Amber, Musk" },
     desc: "Bold, woody and masculine. Strong, confident and long-lasting."
   },
@@ -256,6 +285,7 @@ const PRODUCTS = [
     id: "9pm", name: "9PM", house: "Afnan", category: "men",
     price: 60, originalPrice: 70, size: "100ml EDP", badge: "Best Seller",
     shape: "square", colors: ["#1a1224", "#6a5a8a"],
+    image: "assets/img/products/9pm.jpg",
     notes: { top: "Apple, Cinnamon, Bergamot", heart: "Orange Blossom, Lavender", base: "Vanilla, Tonka, Amber" },
     desc: "Sweet vanilla with a fresh, fruity touch. Seductive yet easy — perfect for everyday wear."
   },
@@ -263,6 +293,7 @@ const PRODUCTS = [
     id: "9pm-rebel", name: "9PM Rebel", house: "Afnan", category: "men",
     price: 60, originalPrice: 65, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#3a1418", "#b03a3a"],
+    image: "assets/img/products/9pm-rebel.jpg",
     notes: { top: "Fruits, Bergamot", heart: "Spices, Florals", base: "Woods, Vanilla, Amber" },
     desc: "A modern sweet-fresh scent with fruity and woody notes. Confident and youthful."
   },
@@ -270,6 +301,7 @@ const PRODUCTS = [
     id: "9pm-elixir", name: "9PM Elixir", house: "Afnan", category: "men",
     price: 60, originalPrice: 65, size: "100ml EDP", badge: null,
     shape: "square", colors: ["#3a1d0c", "#9c6b2f"],
+    image: "assets/img/products/9pm-elixir.jpg",
     notes: { top: "Spices, Apple", heart: "Florals, Cinnamon", base: "Vanilla, Woods, Amber" },
     desc: "Sweet, spicy notes with vanilla and warm woods. Made for evenings and date nights."
   },
@@ -277,6 +309,7 @@ const PRODUCTS = [
     id: "9pm-night-out", name: "9PM Night Out", house: "Afnan", category: "men",
     price: 70, originalPrice: 80, size: "100ml EDP", badge: null,
     shape: "square", colors: ["#14141a", "#6a6a74"],
+    image: "assets/img/products/9pm-night-out.jpg",
     notes: { top: "Fruits, Spices", heart: "Florals, Woods", base: "Vanilla, Amber, Musk" },
     desc: "A modern fragrance with sweet and woody notes that shines after dark. Confident and bold."
   },
@@ -284,6 +317,7 @@ const PRODUCTS = [
     id: "supremacy-collectors", name: "Supremacy Collector's Edition", house: "Afnan", category: "men",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#3a3a42", "#b8b8c2"],
+    image: "assets/img/products/supremacy-collectors.jpg",
     notes: { top: "Fruits, Bergamot", heart: "Woods, Florals", base: "Musk, Amber" },
     desc: "Fresh fruity notes mixed with woods and musk for a refined luxury scent. Smooth and elegant."
   },
@@ -291,6 +325,7 @@ const PRODUCTS = [
     id: "supremacy-noir", name: "Supremacy Noir", house: "Afnan", category: "men",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#101014", "#4a4a54"],
+    image: "assets/img/products/supremacy-noir.jpg",
     notes: { top: "Spices, Bergamot", heart: "Smoky Woods, Leather", base: "Amber, Musk" },
     desc: "Dark, smoky woods blended with spices and fresh accords. Masculine and powerful."
   },
@@ -326,6 +361,7 @@ const PRODUCTS = [
     id: "club-de-nuit-intense-man", name: "Club de Nuit Intense Man", house: "Armaf", category: "men",
     price: 55, originalPrice: 60, size: "105ml EDT", badge: "Best Seller",
     shape: "tall", colors: ["#101418", "#3a4a5a"],
+    image: "assets/img/products/club-de-nuit-intense-man.jpg",
     notes: { top: "Lemon, Blackcurrant, Apple", heart: "Birch, Jasmine, Rose", base: "Musk, Ambergris, Vanilla" },
     desc: "A bold, fresh-smoky fragrance with citrus, woods and musk. Legendary projection and longevity."
   },
@@ -333,6 +369,7 @@ const PRODUCTS = [
     id: "club-de-nuit-women", name: "Club de Nuit Women", house: "Armaf", category: "women",
     price: 55, originalPrice: 60, size: "105ml EDP", badge: null,
     shape: "round", colors: ["#b07a4a", "#e8c8a0"],
+    image: "assets/img/products/club-de-nuit-women.jpg",
     notes: { top: "Citrus, Berries", heart: "Florals, Jasmine", base: "Musk, Amber, Vanilla" },
     desc: "Chic and classy floral scent with a hint of citrus. Elegant and long-lasting."
   },
