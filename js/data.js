@@ -1,17 +1,12 @@
 /* ============================================================
    Glow & Scent 242 — Product Catalog
-   Edit this file to update products, prices and stock.
-   Prices are in Bahamian Dollars (B$).
-     price          → current selling price (number, no quotes)
-     originalPrice  → optional was-price; shows struck-through + "Save"
-     category       → women | men | unisex | oils
-     shape          → round | square | tall | oil   (drawn bottle artwork)
-     colors         → [dark, light]  (used only when no `image` is set)
-     image          → optional "assets/img/products/<file>.jpg"
+   GENERATED from catalog.csv by scripts/import-csv.mjs — do not hand-edit
+   if you are syncing from the Google Sheet. Otherwise edit freely.
+     category → women | men | unisex | oils
+     shape    → round | square | tall | oil
    ============================================================ */
 
 const PRODUCTS = [
-  /* ---------- Khamrah family (Lattafa) ---------- */
   {
     id: "khamrah", name: "Khamrah", house: "Lattafa", category: "unisex",
     price: 65, originalPrice: 90, size: "100ml EDP", badge: "Best Seller",
@@ -33,8 +28,6 @@ const PRODUCTS = [
     notes: { top: "Cinnamon, Incense", heart: "Oud, Dates", base: "Amber, Vanilla, Tonka" },
     desc: "A smoky, spicy blend of cinnamon, oud and sweet amber. Warm, mysterious and utterly magnetic."
   },
-
-  /* ---------- Asad / Lattafa men ---------- */
   {
     id: "asad", name: "Asad", house: "Lattafa", category: "men",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: "Best Seller",
@@ -70,8 +63,6 @@ const PRODUCTS = [
     notes: { top: "Saffron, Spices", heart: "Sweet Accord, Florals", base: "Woods, Amber, Musk" },
     desc: "A bold, captivating fragrance with spicy, sweet and woody accords. Richly addictive."
   },
-
-  /* ---------- Ameer / Ameerat Al Arab (Asdaaf) ---------- */
   {
     id: "ameer-al-arab", name: "Ameer Al Arab", house: "Asdaaf", category: "men",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
@@ -100,8 +91,6 @@ const PRODUCTS = [
     notes: { top: "Red Fruits, Saffron", heart: "Rose, Jasmine", base: "Vanilla, Amber, Musk" },
     desc: "Sweet, smooth and slightly fruity. A soft yet rich scent with a luxurious feel."
   },
-
-  /* ---------- Bade'e Al Oud (Asdaaf) ---------- */
   {
     id: "badee-honor-glory", name: "Bade'e Al Oud – Honor & Glory", house: "Asdaaf", category: "unisex",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
@@ -137,8 +126,6 @@ const PRODUCTS = [
     notes: { top: "Saffron, Rose", heart: "Oud, Orris", base: "Vanilla, Amber, Woods" },
     desc: "A rich blend of oud, rose and vanilla with a luxurious oriental touch. Bold and smoky."
   },
-
-  /* ---------- Yara family (Lattafa) ---------- */
   {
     id: "yara", name: "Yara", house: "Lattafa", category: "women",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: "Best Seller",
@@ -174,8 +161,6 @@ const PRODUCTS = [
     notes: { top: "Sweet Fruits, Bergamot", heart: "Vanilla, Florals", base: "Musk, Amber" },
     desc: "A luxurious blend of sweet fruits, creamy vanilla and delicate florals. Feminine and refined."
   },
-
-  /* ---------- Eclaire gourmands (Lattafa) ---------- */
   {
     id: "eclaire", name: "Eclaire", house: "Lattafa", category: "women",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
@@ -197,8 +182,6 @@ const PRODUCTS = [
     notes: { top: "Banana, Toffee", heart: "Cream, Vanilla", base: "Caramel, Musk" },
     desc: "A delicious gourmand inspired by the classic banoffee dessert. Rich, sweet and irresistible."
   },
-
-  /* ---------- Other Lattafa women ---------- */
   {
     id: "fakhar-women", name: "Fakhar Women", house: "Lattafa", category: "women",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
@@ -255,8 +238,6 @@ const PRODUCTS = [
     notes: { top: "Saffron, Cardamom", heart: "Musk, Amber", base: "Woods, Vanilla" },
     desc: "A luxurious scent with sweet, musky and amber accords. Modern, elegant and clean."
   },
-
-  /* ---------- Confession pair (Lattafa) ---------- */
   {
     id: "her-confession", name: "Her Confession", house: "Lattafa", category: "women",
     price: 60, originalPrice: 70, size: "100ml EDP", badge: null,
@@ -271,8 +252,6 @@ const PRODUCTS = [
     notes: { top: "Spices, Bergamot", heart: "Woods, Leather", base: "Amber, Musk" },
     desc: "Bold, woody and masculine. Strong, confident and long-lasting."
   },
-
-  /* ---------- 9PM family (Afnan) ---------- */
   {
     id: "9pm", name: "9PM", house: "Afnan", category: "men",
     price: 60, originalPrice: 70, size: "100ml EDP", badge: "Best Seller",
@@ -301,8 +280,6 @@ const PRODUCTS = [
     notes: { top: "Fruits, Spices", heart: "Florals, Woods", base: "Vanilla, Amber, Musk" },
     desc: "A modern fragrance with sweet and woody notes that shines after dark. Confident and bold."
   },
-
-  /* ---------- Supremacy (Afnan) ---------- */
   {
     id: "supremacy-collectors", name: "Supremacy Collector's Edition", house: "Afnan", category: "men",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
@@ -317,8 +294,6 @@ const PRODUCTS = [
     notes: { top: "Spices, Bergamot", heart: "Smoky Woods, Leather", base: "Amber, Musk" },
     desc: "Dark, smoky woods blended with spices and fresh accords. Masculine and powerful."
   },
-
-  /* ---------- Amber Oud (Al Haramain) ---------- */
   {
     id: "amber-oud-gold", name: "Amber Oud Gold Edition", house: "Al Haramain", category: "unisex",
     price: 55, originalPrice: 60, size: "120ml EDP", badge: "Best Seller",
@@ -347,8 +322,6 @@ const PRODUCTS = [
     notes: { top: "Berries, Bergamot", heart: "Amber, Florals", base: "Woods, Musk, Vanilla" },
     desc: "A luxurious, sweet-woody fragrance with warm amber and rich floral notes. Elegant and bold."
   },
-
-  /* ---------- Armaf ---------- */
   {
     id: "club-de-nuit-intense-man", name: "Club de Nuit Intense Man", house: "Armaf", category: "men",
     price: 55, originalPrice: 60, size: "105ml EDT", badge: "Best Seller",
@@ -363,8 +336,6 @@ const PRODUCTS = [
     notes: { top: "Citrus, Berries", heart: "Florals, Jasmine", base: "Musk, Amber, Vanilla" },
     desc: "Chic and classy floral scent with a hint of citrus. Elegant and long-lasting."
   },
-
-  /* ---------- Other houses ---------- */
   {
     id: "now-women", name: "Now Women", house: "Rave", category: "women",
     price: 55, originalPrice: 70, size: "100ml EDP", badge: null,
