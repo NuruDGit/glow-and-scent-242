@@ -46,7 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ".collections-grid .collection-card",
     "#featured-grid .product-card",
     ".pillars .pillar",
-    ".testimonials-grid .testimonial"
+    ".testimonials-grid .testimonial",
+    ".ig-grid .ig-tile",
+    ".faq-grid details"
   ];
   revealGroups.forEach((sel) => {
     const items = gsap.utils.toArray(sel);

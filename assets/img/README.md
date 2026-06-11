@@ -15,6 +15,10 @@ in all modern browsers — prefer real JPG for safety).
 | `hero-lifestyle.jpg` | Home → Hero background (replaces the 3D bottle) | 2560×1440 (16:9 landscape) |
 | `cta-lifestyle.jpg` | Home → "Order Today" WhatsApp band background | 2400×1000 (wide landscape) |
 | `cta-match.jpg` | Shop → "Let Us Match You" band background | 2400×1000 (wide landscape) |
+| `gallery/ig-1.jpg` … `ig-6.jpg` | Home → Instagram gallery tiles (real IG posts) | 1080×1080+ (ig-3 and ig-4 are tall — 1080×1620 looks best) |
+
+The Instagram gallery currently reuses site imagery as placeholders;
+drop real post photos into `assets/img/gallery/` to replace them one by one.
 
 ## Product photos
 
