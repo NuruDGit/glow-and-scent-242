@@ -524,7 +524,24 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   justify-content: space-between;
   gap: 0.8rem;
 }
-.product-price { font-family: var(--serif); font-size: 1.3rem; color: var(--gold-light); }
+.product-price { font-family: var(--serif); font-size: 1.3rem; color: var(--gold-light); display: flex; align-items: baseline; gap: 0.5rem; }
+.price-was {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-decoration: line-through;
+  font-weight: 300;
+}
+.save-tag {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--gold);
+  padding: 0.3rem 0.6rem;
+  white-space: nowrap;
+}
 
 .add-btn {
   background: transparent;
@@ -903,7 +920,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .note-row .note-value { color: var(--cream-2); }
 
 .modal-buy { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
-.modal-price { font-family: var(--serif); font-size: 2rem; color: var(--gold-light); }
+.modal-price { font-family: var(--serif); font-size: 2rem; color: var(--gold-light); display: inline-flex; align-items: baseline; gap: 0.6rem; }
+.modal-price .price-was { font-size: 1rem; }
 
 /* ---------- Shop page ---------- */
 .shop-hero {

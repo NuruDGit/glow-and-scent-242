@@ -101,7 +101,7 @@ function productCard(p, idx = 0) {
     <h3 class="product-name" data-open="${p.id}">${p.name}</h3>
     <div class="product-size">${p.size}</div>
     <div class="product-foot">
-      <span class="product-price">${fmt(p.price)}</span>
+      <span class="product-price">${fmt(p.price)}${p.originalPrice ? `<span class="price-was">${fmt(p.originalPrice)}</span>` : ""}</span>
       <button class="add-btn" data-add="${p.id}">Add to Bag</button>
     </div>
   </article>`;
@@ -271,7 +271,8 @@ function openModal(id) {
       <div class="note-row"><span class="note-label">Base</span><span class="note-value">${p.notes.base}</span></div>
     </div>
     <div class="modal-buy">
-      <span class="modal-price">${fmt(p.price)}</span>
+      <span class="modal-price">${fmt(p.price)}${p.originalPrice ? `<span class="price-was">${fmt(p.originalPrice)}</span>` : ""}</span>
+      ${p.originalPrice ? `<span class="save-tag">Save ${fmt(p.originalPrice - p.price)}</span>` : ""}
       <button class="btn btn-solid" data-add="${p.id}">Add to Bag</button>
     </div>`;
   document.getElementById("modal-overlay").classList.add("open");

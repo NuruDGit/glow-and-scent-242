@@ -33,9 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (s === "price-desc") items = [...items].sort((a, b) => b.price - a.price);
     if (s === "name") items = [...items].sort((a, b) => a.name.localeCompare(b.name));
 
+    let emptyMsg = "No fragrances match your search.<br>Try another note or name.";
+    if (!q && cat === "oils") {
+      emptyMsg = `Our pure perfume oils &amp; attars are arriving soon.<br>
+        <a href="https://wa.me/${STORE.whatsapp}?text=Hi!%20Please%20let%20me%20know%20when%20your%20perfume%20oils%20are%20available."
+           target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline">
+           Message us on WhatsApp</a> to be the first to know.`;
+    }
     grid.innerHTML = items.length
       ? items.map((p, i) => productCard(p, i)).join("")
-      : `<div class="no-results">No fragrances match your search.<br>Try another note or name.</div>`;
+      : `<div class="no-results">${emptyMsg}</div>`;
 
     countEl.textContent = `${items.length} fragrance${items.length === 1 ? "" : "s"}`;
 
