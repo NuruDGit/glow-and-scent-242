@@ -43,6 +43,7 @@ const PRODUCTS = [
     id: "asad-bourbon", name: "Asad Bourbon", house: "Lattafa", category: "men",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "square", colors: ["#3a1d0c", "#9c6b2f"],
+    image: "assets/img/products/asad-bourbon.jpg",
     notes: { top: "Bourbon, Spices", heart: "Tobacco, Coffee", base: "Vanilla, Woods, Amber" },
     desc: "A rich, sweet-spicy fragrance with warm vanilla, woods and a boozy twist. Made for nights out."
   },
@@ -74,6 +75,7 @@ const PRODUCTS = [
     id: "ameer-al-arab", name: "Ameer Al Arab", house: "Asdaaf", category: "men",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#16161a", "#8c8c94"],
+    image: "assets/img/products/ameer-al-arab.jpg",
     notes: { top: "Spices, Bergamot", heart: "Woods, Geranium", base: "Amber, Musk" },
     desc: "Bold, woody and slightly spicy. A strong masculine scent that lasts all day."
   },
@@ -81,6 +83,7 @@ const PRODUCTS = [
     id: "ameer-al-arab-imperium", name: "Ameer Al Arab Imperium", house: "Asdaaf", category: "men",
     price: 50, originalPrice: 55, size: "100ml EDP", badge: null,
     shape: "tall", colors: ["#1a3a5a", "#5a9bd4"],
+    image: "assets/img/products/ameer-al-arab-imperium.jpg",
     notes: { top: "Marine Notes, Citrus", heart: "Lavender, Geranium", base: "Cedar, Musk" },
     desc: "Fresh, aquatic and clean. Perfect for daily wear and warm island weather."
   },
@@ -88,6 +91,7 @@ const PRODUCTS = [
     id: "ameer-al-arab-rose", name: "Ameer Al Arab Rose", house: "Asdaaf", category: "women",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#7a2240", "#e0a0b4"],
+    image: "assets/img/products/ameer-al-arab-rose.jpg",
     notes: { top: "Pink Pepper, Bergamot", heart: "Rose, Jasmine", base: "Musk, Amber" },
     desc: "Floral, sweet and feminine. A romantic scent with a soft, rosy finish."
   },
@@ -95,6 +99,7 @@ const PRODUCTS = [
     id: "ameerat-al-arab-red", name: "Ameerat Al Arab (Red)", house: "Asdaaf", category: "women",
     price: 50, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#6e1018", "#c4404a"],
+    image: "assets/img/products/ameerat-al-arab-red.jpg",
     notes: { top: "Red Fruits, Saffron", heart: "Rose, Jasmine", base: "Vanilla, Amber, Musk" },
     desc: "Sweet, smooth and slightly fruity. A soft yet rich scent with a luxurious feel."
   },
@@ -222,6 +227,7 @@ const PRODUCTS = [
     id: "ajwad", name: "Ajwad", house: "Lattafa", category: "unisex",
     price: 50, originalPrice: 55, size: "60ml EDP", badge: null,
     shape: "round", colors: ["#7a2240", "#d4708f"],
+    image: "assets/img/products/ajwad.jpg",
     notes: { top: "Pink Fruits, Bergamot", heart: "Jasmine, Bitter Almond", base: "Vanilla, Oakmoss, Woods" },
     desc: "A warm, fruity-woody fragrance with sweet vanilla and soft floral notes. Elegant and inviting."
   },
@@ -333,6 +339,7 @@ const PRODUCTS = [
     id: "amber-oud-gold", name: "Amber Oud Gold Edition", house: "Al Haramain", category: "unisex",
     price: 55, originalPrice: 60, size: "120ml EDP", badge: "Best Seller",
     shape: "square", colors: ["#9a7b1e", "#e8c95a"],
+    image: "assets/img/products/amber-oud-gold.jpg",
     notes: { top: "Tropical Fruits, Bergamot", heart: "Amber, Sweet Notes", base: "Vanilla, Musk, Woods" },
     desc: "A sweet, fruity-amber scent with tropical freshness and creamy warmth. Rich and radiant — liquid gold."
   },
@@ -340,6 +347,7 @@ const PRODUCTS = [
     id: "amber-oud-dubai-night", name: "Amber Oud Dubai Night", house: "Al Haramain", category: "unisex",
     price: 55, originalPrice: 60, size: "60ml EDP", badge: null,
     shape: "square", colors: ["#1a1a4a", "#5a5ac6"],
+    image: "assets/img/products/amber-oud-dubai-night.jpg",
     notes: { top: "Spices, Bergamot", heart: "Amber, Woods", base: "Musk, Vanilla" },
     desc: "An intense oriental fragrance with amber, woods and warm spices. Deep and luxurious."
   },
@@ -347,6 +355,7 @@ const PRODUCTS = [
     id: "amber-oud-aqua-dubai", name: "Amber Oud Aqua Dubai", house: "Al Haramain", category: "unisex",
     price: 55, originalPrice: 60, size: "60ml EDP", badge: null,
     shape: "tall", colors: ["#0e3a5a", "#3fb0e6"],
+    image: "assets/img/products/amber-oud-aqua-dubai.jpg",
     notes: { top: "Marine Notes, Citrus", heart: "Florals, Amber", base: "Woods, Musk" },
     desc: "A refreshing fragrance inspired by aquatic freshness and modern sophistication."
   },
@@ -354,6 +363,7 @@ const PRODUCTS = [
     id: "amber-oud-ruby", name: "Amber Oud Ruby Edition", house: "Al Haramain", category: "unisex",
     price: 55, originalPrice: 60, size: "60ml EDP", badge: null,
     shape: "square", colors: ["#6e1018", "#c4404a"],
+    image: "assets/img/products/amber-oud-ruby.jpg",
     notes: { top: "Berries, Bergamot", heart: "Amber, Florals", base: "Woods, Musk, Vanilla" },
     desc: "A luxurious, sweet-woody fragrance with warm amber and rich floral notes. Elegant and bold."
   },
@@ -377,6 +387,7 @@ const PRODUCTS = [
     id: "now-women", name: "Now Women", house: "Rave", category: "women",
     price: 55, originalPrice: 70, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#d98aa8", "#f0c8d8"],
+    image: "assets/img/products/now-women.jpg",
     notes: { top: "Fruits, Bergamot", heart: "Florals, Peony", base: "Musk, Cedar" },
     desc: "Light, fruity and floral. Fresh and playful — perfect for daily wear."
   },
@@ -384,6 +395,7 @@ const PRODUCTS = [
     id: "vanilla-voyage", name: "Vanilla Voyage", house: "Maison Asrar", category: "unisex",
     price: 55, originalPrice: 60, size: "100ml EDP", badge: null,
     shape: "round", colors: ["#7a5a2a", "#d8b87a"],
+    image: "assets/img/products/vanilla-voyage.jpg",
     notes: { top: "Vanilla, Bergamot", heart: "Gourmand Accord, Tonka", base: "Sandalwood, Musk" },
     desc: "A creamy vanilla fragrance with warm gourmand notes. Sweet, comforting and cozy."
   }
