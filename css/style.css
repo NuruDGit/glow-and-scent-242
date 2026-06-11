@@ -273,7 +273,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .hero-eyebrow::before { content: ""; width: 48px; height: 1px; background: var(--gold); }
 
 .hero-title {
-  font-size: clamp(3rem, 7.2vw, 6rem);
+  font-size: clamp(2.6rem, 6.2vw, 5.4rem);
   line-height: 1.02;
   font-weight: 400;
   color: var(--cream);
