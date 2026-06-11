@@ -84,12 +84,19 @@ function bottleSVG(p, uid = "") {
   </svg>`;
 }
 
+/* ---------- Product artwork: photo when provided, drawn bottle otherwise ---------- */
+function productArt(p, uid = "") {
+  return p.image
+    ? `<img src="${p.image}" alt="${p.name} by ${p.house}" loading="lazy" onerror="this.outerHTML = bottleSVG(getProduct('${p.id}'), '${uid}')">`
+    : bottleSVG(p, uid);
+}
+
 /* ---------- Product card ---------- */
 function productCard(p, idx = 0) {
   return `
   <article class="product-card reveal" data-id="${p.id}" style="--i:${idx}">
     ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
-    <div class="product-art" data-open="${p.id}" title="View ${p.name}">${bottleSVG(p)}</div>
+    <div class="product-art" data-open="${p.id}" title="View ${p.name}">${productArt(p)}</div>
     <div class="product-house">${p.house}</div>
     <h3 class="product-name" data-open="${p.id}">${p.name}</h3>
     <div class="product-size">${p.size}</div>
@@ -212,7 +219,7 @@ function renderCart() {
     wrap.innerHTML = cart.map((l) => {
       const p = getProduct(l.id);
       return `<div class="cart-item">
-        <div class="cart-item-art">${bottleSVG(p, "-cart")}</div>
+        <div class="cart-item-art">${productArt(p, "-cart")}</div>
         <div>
           <div class="cart-item-name">${p.name}</div>
           <div class="cart-item-meta">${p.house} · ${p.size}</div>
@@ -250,7 +257,9 @@ function closeCart() {
 /* ---------- Product modal ---------- */
 function openModal(id) {
   const p = getProduct(id);
-  document.getElementById("modal-art").innerHTML = bottleSVG(p, "-modal");
+  const art = document.getElementById("modal-art");
+  art.innerHTML = productArt(p, "-modal");
+  art.style.padding = p.image ? "0" : "";
   document.getElementById("modal-info").innerHTML = `
     <div class="product-house">${p.house}</div>
     <h3>${p.name}</h3>

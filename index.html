@@ -92,20 +92,26 @@
         <h2 class="section-title">Explore the <em>Collections</em></h2>
       </div>
       <div class="collections-grid" id="collections-grid">
+        <!-- Each card tries its photo in assets/img/ first and falls back
+             to the drawn bottle artwork if the file doesn't exist yet -->
         <a class="collection-card" href="shop.html?cat=women">
           <div class="collection-art" data-bottle="yara"></div>
+          <img class="collection-img" src="assets/img/collection-her.jpg" alt="For Her — women's fragrances" loading="lazy" onerror="this.remove()">
           <div class="collection-info"><h3>For Her</h3><p>Shop Women</p></div>
         </a>
         <a class="collection-card" href="shop.html?cat=men">
           <div class="collection-art" data-bottle="asad"></div>
+          <img class="collection-img" src="assets/img/collection-him.jpg" alt="For Him — men's fragrances" loading="lazy" onerror="this.remove()">
           <div class="collection-info"><h3>For Him</h3><p>Shop Men</p></div>
         </a>
         <a class="collection-card" href="shop.html?cat=unisex">
           <div class="collection-art" data-bottle="khamrah"></div>
+          <img class="collection-img" src="assets/img/collection-unisex.jpg" alt="Unisex fragrances" loading="lazy" onerror="this.remove()">
           <div class="collection-info"><h3>Unisex</h3><p>Shop Unisex</p></div>
         </a>
         <a class="collection-card" href="shop.html?cat=oils">
           <div class="collection-art" data-bottle="oil-royal-oud"></div>
+          <img class="collection-img" src="assets/img/collection-oils.jpg" alt="Perfume oils and attars" loading="lazy" onerror="this.remove()">
           <div class="collection-info"><h3>Perfume Oils</h3><p>Shop Attars</p></div>
         </a>
       </div>
@@ -134,6 +140,7 @@
         <div class="story-art">
           <div class="story-art-frame"></div>
           <div data-bottle="amber-oud-gold"></div>
+          <img class="story-img" src="assets/img/story.jpg" alt="Arabian perfumery — oud, amber and gold" loading="lazy" onerror="this.remove()">
         </div>
         <div class="story-copy">
           <span class="section-eyebrow">Our Story</span>

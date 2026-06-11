@@ -366,6 +366,18 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 }
 .collection-card:hover .collection-art { transform: scale(1.08) translateY(-10px); }
 .collection-art svg { width: 58%; height: auto; filter: drop-shadow(0 24px 40px rgba(0,0,0,0.55)); }
+/* Optional photo layer: covers the SVG art when the file exists,
+   removes itself (revealing the SVG) when it doesn't */
+.collection-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* above the SVG art, below the ::after gradient and text */
+  transition: transform 0.8s var(--ease-lux);
+}
+.collection-card:hover .collection-img { transform: scale(1.06); }
 .collection-card::after {
   content: "";
   position: absolute;
@@ -441,6 +453,14 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   transition: transform 0.7s var(--ease-lux);
 }
 .product-card:hover .product-art svg { transform: translateY(-8px) rotate(-2deg) scale(1.04); }
+.product-art img, .modal-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease-lux);
+}
+.product-card:hover .product-art img { transform: scale(1.06); }
+.cart-item-art img { width: 100%; height: 100%; object-fit: cover; }
 
 .product-house {
   font-size: 0.62rem;
@@ -505,6 +525,14 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   overflow: hidden;
 }
 .story-art svg { width: 52%; height: auto; filter: drop-shadow(0 32px 44px rgba(60,40,10,0.35)); }
+.story-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.story-art .story-art-frame { z-index: 2; }
 .story-art-frame {
   position: absolute;
   inset: 1.2rem;
