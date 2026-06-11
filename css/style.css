@@ -558,6 +558,80 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .add-btn:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
 .add-btn.added { background: var(--gold); color: var(--black); border-color: var(--gold); }
 
+/* ---------- Shop by House ---------- */
+.houses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+.house-card {
+  border: 1px solid rgba(201, 162, 60, 0.16);
+  background: var(--ink);
+  padding: 2rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 150px;
+  text-align: center;
+  transition: border-color 0.4s, transform 0.5s var(--ease-lux), background 0.4s;
+}
+.house-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+  background: linear-gradient(160deg, #1a1610, var(--ink));
+}
+.house-logo-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.house-logo { max-height: 52px; max-width: 80%; width: auto; object-fit: contain; }
+/* when a real logo loads, hide the text wordmark */
+.house-card.has-logo .house-name { display: none; }
+.house-name {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--cream);
+  line-height: 1.15;
+}
+.house-count {
+  font-size: 0.62rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ---------- Shop house banner ---------- */
+.house-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.9rem 1.3rem;
+  border: 1px solid rgba(201, 162, 60, 0.3);
+  background: var(--ink);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.house-banner strong {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--gold-light);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.house-banner #clear-house {
+  margin-left: auto;
+  background: none;
+  border: 1px solid rgba(201, 162, 60, 0.4);
+  color: var(--cream);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+.house-banner #clear-house:hover { background: var(--gold); color: var(--black); }
+
 /* ---------- Story / About ---------- */
 .story { background: var(--cream); color: var(--ink); }
 .story .section-title, .story h3 { color: var(--ink); }
@@ -1022,6 +1096,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 @media (max-width: 1060px) {
   .product-grid { grid-template-columns: repeat(3, 1fr); }
   .collections-grid { grid-template-columns: repeat(2, 1fr); }
+  .houses-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
@@ -1049,6 +1124,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
   .story-grid { grid-template-columns: 1fr; gap: 3rem; }
   .pillars, .testimonials-grid { grid-template-columns: 1fr; }
   .product-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem 0.8rem; }
+  .houses-grid { grid-template-columns: repeat(2, 1fr); }
   .modal { grid-template-columns: 1fr; }
   .modal-art { min-height: 280px; }
   .section { padding: 5rem 0; }

@@ -145,6 +145,18 @@
     </div>
   </section>
 
+  <!-- ================= SHOP BY HOUSE ================= -->
+  <section class="section" style="padding-top:0" id="houses">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow">The Perfume Houses</span>
+        <h2 class="section-title">Shop by <em>House</em></h2>
+        <p class="section-sub">The Gulf's most celebrated maisons — tap a house to explore every fragrance we carry from it.</p>
+      </div>
+      <div class="houses-grid" id="houses-grid"></div>
+    </div>
+  </section>
+
   <!-- ================= STORY ================= -->
   <section class="section story" id="story">
     <div class="container">
@@ -314,12 +326,14 @@
   <script src="js/store.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Fill collection cards & story panel with bottle artwork
+    // Fill collection cards & story panel with bottle artwork, render houses
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("[data-bottle]").forEach((el, i) => {
         const p = getProduct(el.dataset.bottle);
         if (p) el.innerHTML = bottleSVG(p, "-c" + i);
       });
+      const hg = document.getElementById("houses-grid");
+      if (hg) hg.innerHTML = houses().map(houseCard).join("");
     });
   </script>
   <script type="module" src="js/three-hero.js"></script>

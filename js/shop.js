@@ -11,19 +11,44 @@ document.addEventListener("DOMContentLoaded", () => {
   const sort = document.getElementById("shop-sort");
   const pills = document.querySelectorAll(".filter-pills .pill");
 
-  // Allow deep-linking a category: shop.html?cat=oils
+  // Deep links: shop.html?cat=oils  and/or  shop.html?house=Lattafa
   const params = new URLSearchParams(location.search);
   let activeCat = params.get("cat") || "all";
+  let activeHouse = params.get("house") || "all";
+  const banner = document.getElementById("house-banner");
 
   const state = () => ({
     cat: activeCat,
+    house: activeHouse,
     q: (search.value || "").trim().toLowerCase(),
     sort: sort.value
   });
 
+  function syncURL() {
+    const qs = new URLSearchParams();
+    if (activeCat !== "all") qs.set("cat", activeCat);
+    if (activeHouse !== "all") qs.set("house", activeHouse);
+    const str = qs.toString();
+    history.replaceState(null, "", str ? `shop.html?${str}` : "shop.html");
+  }
+
+  function renderBanner() {
+    if (!banner) return;
+    if (activeHouse === "all") { banner.innerHTML = ""; banner.hidden = true; return; }
+    banner.hidden = false;
+    banner.innerHTML = `Showing <strong>${activeHouse}</strong>
+      <button id="clear-house" aria-label="Clear house filter">Clear ×</button>`;
+    document.getElementById("clear-house").addEventListener("click", () => {
+      activeHouse = "all";
+      syncURL(); renderBanner(); apply();
+    });
+  }
+
   function apply() {
-    const { cat, q, sort: s } = state();
-    let items = PRODUCTS.filter((p) => cat === "all" || p.category === cat);
+    const { cat, house, q, sort: s } = state();
+    let items = PRODUCTS.filter((p) =>
+      (cat === "all" || p.category === cat) &&
+      (house === "all" || p.house === house));
     if (q) {
       items = items.filter((p) =>
         [p.name, p.house, p.desc, Object.values(p.notes).join(" ")].join(" ").toLowerCase().includes(q)
@@ -61,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       pills.forEach((x) => x.classList.remove("active"));
       pill.classList.add("active");
       activeCat = pill.dataset.cat;
-      history.replaceState(null, "", activeCat === "all" ? "shop.html" : `shop.html?cat=${activeCat}`);
+      syncURL();
       apply();
     });
   });
@@ -69,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   search.addEventListener("input", apply);
   sort.addEventListener("change", apply);
 
+  renderBanner();
   apply();
 
   gsap.from(".shop-hero > .container > *", {

@@ -91,6 +91,30 @@ function productArt(p, uid = "") {
     : bottleSVG(p, uid);
 }
 
+/* ---------- Houses (brands) ---------- */
+const houseSlug = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+function houses() {
+  const map = {};
+  PRODUCTS.forEach((p) => { map[p.house] = (map[p.house] || 0) + 1; });
+  return Object.entries(map)
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([name, count]) => ({ name, count, slug: houseSlug(name) }));
+}
+
+function houseCard(h) {
+  // Shows the official logo from assets/img/brands/<slug>.png when present;
+  // falls back to an elegant typographic wordmark when the file is missing.
+  return `<a class="house-card" href="shop.html?house=${encodeURIComponent(h.name)}" aria-label="Shop ${h.name}">
+    <span class="house-logo-wrap">
+      <img class="house-logo" src="assets/img/brands/${h.slug}.png" alt="${h.name} logo" loading="lazy"
+           onload="this.closest('.house-card').classList.add('has-logo')" onerror="this.remove()">
+      <span class="house-name">${h.name}</span>
+    </span>
+    <span class="house-count">${h.count} ${h.count === 1 ? "fragrance" : "fragrances"}</span>
+  </a>`;
+}
+
 /* ---------- Product card ---------- */
 function productCard(p, idx = 0) {
   return `
