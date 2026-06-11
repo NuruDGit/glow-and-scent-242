@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ".collections-grid .collection-card",
     "#featured-grid .product-card",
     ".pillars .pillar",
-    ".testimonials-grid .testimonial",
+    ".testimonials-section",
     ".ig-grid .ig-tile",
     ".faq-grid details"
   ];
@@ -86,6 +86,34 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: { trigger: ".story-art", start: "top bottom", end: "bottom top", scrub: 1.2 }
     });
   }
+
+  /* ---------- Testimonials carousel ---------- */
+  (function () {
+    const slides = Array.from(document.querySelectorAll(".testimonials-slide"));
+    const dots   = Array.from(document.querySelectorAll(".t-dot"));
+    if (!slides.length) return;
+    let current = 0;
+    let timer;
+
+    function goTo(idx) {
+      slides[current].classList.remove("active");
+      dots[current].classList.remove("active");
+      current = (idx + slides.length) % slides.length;
+      slides[current].classList.add("active");
+      dots[current].classList.add("active");
+      gsap.fromTo(slides[current],
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }
+      );
+    }
+
+    dots.forEach((dot, i) => dot.addEventListener("click", () => { clearInterval(timer); goTo(i); startTimer(); }));
+
+    function startTimer() {
+      timer = setInterval(() => goTo(current + 1), 5500);
+    }
+    startTimer();
+  })();
 
   /* ---------- CTA band glow ---------- */
   gsap.from(".cta-band .container > *", {

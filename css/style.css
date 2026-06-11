@@ -721,37 +721,97 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
 .pillar h3 { font-size: 1.4rem; margin-bottom: 0.9rem; }
 .pillar p { color: var(--muted); font-size: 0.92rem; line-height: 1.8; }
 
-/* ---------- Testimonials ---------- */
-.testimonials-grid {
+/* ---------- Testimonials (split carousel) ---------- */
+.testimonials-section {
+  background: var(--cream);
+  padding: 6rem 0;
+}
+.testimonials-split {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.4rem;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5rem;
+  align-items: center;
 }
-.testimonial {
-  background: var(--ink);
-  border: 1px solid rgba(201, 162, 60, 0.16);
-  padding: 2.4rem 2.2rem;
-  position: relative;
-}
-.testimonial::before {
-  content: "“";
-  font-family: var(--serif);
-  font-size: 4.5rem;
-  color: var(--gold);
-  opacity: 0.5;
-  line-height: 0.6;
-  display: block;
-  margin-bottom: 1.2rem;
-}
-.testimonial p { color: var(--cream-2); font-size: 0.96rem; line-height: 1.85; font-style: italic; }
-.testimonial-author {
-  margin-top: 1.6rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
+.testimonials-left .section-eyebrow { color: var(--muted); }
+.testimonials-left .section-title { color: var(--ink); margin-bottom: 2.4rem; }
+.btn-outline-dark {
+  display: inline-block;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  padding: 0.8rem 2rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s;
 }
-.testimonial-stars { color: var(--gold); letter-spacing: 0.3em; margin-top: 0.4rem; font-size: 0.8rem; }
+.btn-outline-dark:hover { background: var(--ink); color: var(--cream); }
+
+.testimonials-carousel { position: relative; overflow: hidden; }
+.testimonials-slide { display: none; }
+.testimonials-slide.active { display: block; }
+.testimonials-slide blockquote {
+  margin: 0 0 2.2rem;
+  padding: 0;
+}
+.testimonials-slide blockquote p {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: var(--ink);
+  font-style: italic;
+  font-weight: 400;
+}
+.t-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.t-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: hsl(var(--av-h, 35), 48%, 72%);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: #fff;
+}
+.t-avatar::after { content: attr(data-initials); }
+.t-author-info strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.t-author-info span {
+  font-size: 0.76rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.t-dots {
+  display: flex;
+  gap: 0.55rem;
+  margin-top: 2.2rem;
+}
+.t-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(20, 14, 6, 0.2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s, transform 0.25s;
+}
+.t-dot.active { background: var(--ink); transform: scale(1.25); }
 
 /* ---------- Instagram gallery ---------- */
 .ig-grid {
@@ -1265,7 +1325,8 @@ a.ig-tile:hover img { transform: scale(1.06); }
   .burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
   .story-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .pillars, .testimonials-grid { grid-template-columns: 1fr; }
+  .pillars { grid-template-columns: 1fr; }
+  .testimonials-split { grid-template-columns: 1fr; gap: 2.8rem; }
   .faq-grid { grid-template-columns: 1fr; }
   .ig-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 210px; }
   .ig-center { grid-column: span 2; grid-row: auto; }
