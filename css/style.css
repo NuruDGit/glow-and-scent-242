@@ -1005,6 +1005,8 @@ a.ig-tile:hover img { transform: scale(1.06); }
   color: #6e6754;
   letter-spacing: 0.08em;
 }
+.footer-credit-link { color: inherit; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+.footer-credit-link:hover { color: var(--gold-light); }
 .socials { display: flex; gap: 0.9rem; margin-top: 1.4rem; }
 .socials a {
   width: 40px; height: 40px;
